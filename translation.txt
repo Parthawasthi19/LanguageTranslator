@@ -1,0 +1,94 @@
+1. HTML (index.html)
+The index.html file defines the structure of the web application.
+
+Key Features:
+Dark Mode Toggle:
+A switch in the bottom-right corner toggles the dark mode for the app.
+Language Selection Dropdowns:
+Two dropdown menus (#input-language and #output-language) allow users to select source and target languages.
+Input Text Area:
+Users can type text or upload a document.
+Swap Button:
+The button swaps the source and target languages.
+Output Text Area:
+Displays the translated text.
+Download Button:
+Allows downloading the translated output as a document.
+Code Summary:
+Includes external Ionicons for icons and links the CSS (style.css) and JavaScript (script.js) files.
+HTML elements use semantic tags like div, textarea, label, and button for accessibility.
+2. CSS (style.css)
+This file styles the web application, ensuring it’s visually appealing and responsive.
+
+Key Styling Features:
+Theming:
+Variables (--primary-color, --bg-color, etc.) define the light and dark themes.
+Dark mode is toggled by adding a dark class to the body.
+Dropdown Menus:
+Styled with smooth transitions and a toggle mechanism for active states.
+Responsive Design:
+Media queries ensure the application adjusts on smaller screens by switching to a column layout.
+Modern Design Elements:
+Rounded corners, hover effects, and animations (e.g., dropdown toggle icon rotation).
+Custom Scrollbar:
+Styled to match the app theme.
+3. JavaScript (languages.js and script.js)
+JavaScript brings interactivity to the application.
+
+languages.js:
+Stores the list of available languages, which the app uses to populate dropdown menus dynamically.
+
+Key Functionalities in script.js:
+Dynamic Dropdown Population:
+Populates the language dropdown menus with options from the languages.js array.
+Input and Output Management:
+Listens for user input in the #input-text area and updates the character count (#input-chars).
+Translation Logic:
+Interacts with a translation API (or a mock function) to convert the text in the source language to the target language.
+Language Swap:
+Swaps the values of the #input-language and #output-language dropdowns.
+File Upload:
+Allows users to upload a document and extract text for translation.
+Dark Mode Toggle:
+Adds or removes the dark class to the body element based on the toggle's state.
+Download Translations:
+Generates a downloadable file from the output text.
+4. Project Workflow
+User Inputs Text:
+In the #input-text area or by uploading a document.
+Selects Languages:
+Uses dropdown menus to specify source and target languages.
+Translation Trigger:
+JavaScript captures the input text and language choices and sends a request to a translation API.
+The translated text is displayed in the #output-text area.
+Additional Features:
+Swap languages for bidirectional translation.
+Toggle dark mode for better accessibility.
+Functionality and Code Explanation
+Each part of the HTML, CSS, and JavaScript contributes to specific functionalities:
+
+Dropdown Menus (#input-language and #output-language):
+
+HTML: Provides a container for language options.
+CSS: Handles the active state and hover effects.
+JS: Dynamically adds language options and handles user selection.
+Text Areas (#input-text, #output-text):
+
+HTML: One for input, one for output (disabled for read-only mode).
+JS: Monitors input changes, counts characters, and triggers translation.
+Swap Button:
+
+HTML: A button with an icon.
+JS: Exchanges values between the input and output language dropdowns.
+Dark Mode:
+
+HTML: A toggle switch.
+CSS: Uses variables for light and dark themes.
+JS: Toggles the dark class on the body element.
+Translation Logic:
+
+JS: Makes API calls (if implemented) or mock translations.
+Download Button:
+
+HTML: A button with an icon.
+JS: Converts the output text into a downloadable file format (e.g., .txt).
